@@ -1,0 +1,5 @@
+Introducing Big O
+
+Big O Notation is a way to formalize fuzzy counting.
+It allows us to talk formally talk about how the runtime of an algorithm grows as the inputs grow.
+
