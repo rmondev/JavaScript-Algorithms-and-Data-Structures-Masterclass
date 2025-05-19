@@ -87,22 +87,19 @@ function validAnagram(first, second){
 
     let lookup = {};
 
-    for (let i = 0; i < first.length; i++) {
-        const letter = first[i];
-        // If letter exists, than increment by 1, otherwise set to 1 
-        lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1;
+    for (let letter of first) {
+        lookup[letter] ? lookup[letter]++ : lookup[letter] = 1;
     }
 
-    for(let i = 0; i < second.length; i++){
-        let letter = second[i];
-        // Can't find letter or letter is 0, then it is not an anagram
-        if (!lookup[letter]) {
+    for (let letter of second) {
+          if (!lookup[letter]) {
             return false;
         } else {
-            lookup[letter] -= 1;
+            lookup[letter]--;
         }
-
     }
+
+    return true;
 }
 
 
