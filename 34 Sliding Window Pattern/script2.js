@@ -16,7 +16,7 @@ function maxSubarraySum(arr, n) {
         //     maxSum = tempSum;
         // }
 
-        maxSum = Math.max(tempSum, maxSum);
+        maxSum = Math.max(maxSum, tempSum);
     }
 
     return maxSum;
