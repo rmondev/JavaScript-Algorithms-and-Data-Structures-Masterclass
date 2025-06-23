@@ -12,9 +12,11 @@ function maxSubarraySum(arr, n) {
     for(let i = n; i < arr.length; i++) {
         tempSum = tempSum - (arr[i-n]) /** subtract value from previous index and add value in next index */ + arr[i];
 
-        if (tempSum > maxSum){
-            maxSum = tempSum;
-        }
+        // if (tempSum > maxSum){
+        //     maxSum = tempSum;
+        // }
+
+        maxSum = Math.max(tempSum, maxSum);
     }
 
     return maxSum;
