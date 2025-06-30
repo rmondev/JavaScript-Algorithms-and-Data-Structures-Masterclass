@@ -53,13 +53,13 @@ function validAnagram(str1, str2) {
     let frequencyCounter1 = {};
     let frequencyCounter2 = {};
 
-    for (let e of str1) {
-        frequencyCounter1[e] = frequencyCounter1[e] ? frequencyCounter1[e] + 1 : 1;
+    for (let val of str1) {
+        frequencyCounter1[val] = frequencyCounter1[val] ? frequencyCounter1[val] + 1 : 1;
     };
 
     
-    for(let e of str2) {
-        frequencyCounter2[e] = frequencyCounter2[e] ? frequencyCounter2[e] + 1 : 1;
+    for(let val of str2) {
+        frequencyCounter2[val] = frequencyCounter2[val] ? frequencyCounter2[val] + 1 : 1;
     };
     
 
