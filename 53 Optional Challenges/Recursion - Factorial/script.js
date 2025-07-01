@@ -7,7 +7,7 @@ function factorial(num) {
     return num * factorial(num-1)
 }
 
-
+console.log(factorial(0)) // 0
 console.log(factorial(1)) // 1
 console.log(factorial(2)) // 2
 console.log(factorial(4)) // 24
