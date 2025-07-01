@@ -20,19 +20,20 @@
 
 function areThereDuplicates(...args) {
 
+  let counts = {}
+  
+  for(let char of args){
+      counts[char] = counts[char] ? counts[char] + 1 : 1;
+  }
+  
+  for(let key in counts){
+    console.log(key)
+    console.log(counts[key])
 
-  let collection = {};
-  for (let val in args) {
-    collection[args[val]] = (collection[args[val]] || 0) + 1
-    // console.log(`Value: ${val}, Count: ${collection[val]}`);
+    if(counts[key] > 1) return true
   }
 
-  for (let key in collection) {
-    console.log(key + ' : ' + collection[key])
-    
-    if (collection[key] > 1) return true
-  }
-  return false;
+  return false
 }
 
 

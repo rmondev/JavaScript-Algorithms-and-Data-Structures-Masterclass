@@ -23,5 +23,36 @@ function constructNote(str1, str2) {
         return false;
     }
 
-    
+    let str1Counter = {}
+
+    for(let char of str1) {
+        str1Counter[char] = str1Counter[char] ? str1Counter[char] + 1 : 1;
+        
+    }
+
+    //console.log(str1Counter)
+
+    let str2Counter = {}
+
+    for(let char of str2) {
+        str2Counter[char] = str2Counter[char] ? str2Counter[char] + 1 : 1;
+    }
+    //console.log(str2Counter)
+
+    for(let key in str1Counter) {
+        //console.log(key)
+        //console.log(str2Counter[key])
+        
+        if(!(str1Counter[key]) || str2Counter[key] < str1Counter[key]) return false
+
+        
+    }
+
+    return true
 }
+
+// console.log(constructNote('aab', 'abc'))
+
+console.log(constructNote('aa', 'abc')) // false
+console.log(constructNote('abc', 'dcba')) // true
+console.log(constructNote('aabbcc', 'bcabcaddff')) // true
